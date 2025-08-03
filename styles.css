@@ -1,0 +1,149 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #4d2c2c;
+  font-family: 'Poppins', sans-serif;
+
+
+  /* 🎂 Add your background image below */
+  background-image: url('https://png.pngtree.com/thumb_back/fh260/background/20230416/pngtree-dessert-mousse-cake-fantasy-background-image_2408536.jpg'); /* Bakery kitchen vibe */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  z-index: 0;
+}
+
+h1, h2 {
+  font-family: 'Papyrus', cursive;
+  color: #d94c4c;
+}
+
+h1 {
+  font-size: 36px;
+  text-shadow: 2px 2px 5px #ffc0cb;
+  transform: rotate(-1deg);
+}
+
+h3 {
+  font-weight: 600;
+  color: #ff6f91;
+  letter-spacing: 1px;
+}
+
+/* 🧁 Optional overlay to keep content readable */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-color: rgba(255, 255, 255, 0.75); /* soft white overlay */
+  z-index: -1;
+}
+
+/* You can keep the rest of your CSS styles below as-is (cake cards, header, footer, etc.) */
+
+header {
+  background-color: #ffe0e6;
+  padding: 2rem;
+  text-align: center;
+}
+
+.cakes {
+  padding: 2rem;
+}
+
+.cake-container {
+  display: flex;
+  flex-wrap: wrap;           /* Allows wrapping on smaller screens */
+  justify-content: center;   /* Aligns cards in the center horizontally */
+  gap: 20px;                 /* Spacing between cards */
+  padding: 40px;
+}
+
+.cake-card {
+  width: 220px;              /* Ensures cards are consistent in size */
+  background-color: #fff8f0;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(204, 102, 102, 0.2);
+  text-align: center;
+  padding: 16px;
+  transition: transform 0.3s ease;
+}
+
+.cake-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 12px rgba(204, 102, 102, 0.3);
+} 
+
+.cake-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.cake-card h3 {
+  margin-top: 12px;
+  font-size: 20px;
+  color: #b15555;
+}
+
+.cake-card p {
+  font-size: 14px;
+  color: #5a2b2b;
+}
+
+.contact {
+  background-color: #fff0f5;
+  padding: 2rem;
+}
+
+input, textarea {
+  display: block;
+  margin: 0.5rem auto;
+  padding: 0.5rem;
+  width: 80%;
+  border-radius: 8px;
+  border: 1px solid #ffb6c1;
+}
+
+button {
+  background-color: #ff69b4;
+  color: white;
+  border: none;
+  padding: 0.7rem 1.5rem;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #ff1493;
+}
+
+.bounce-text:hover {
+  animation: bounce 0.4s;
+}
+
+@keyframes bounce {
+  0%   { transform: translateY(0); }
+  30%  { transform: translateY(-10px); }
+  60%  { transform: translateY(5px); }
+  100% { transform: translateY(0); }
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: #ffe0e6;
+}
+
+@media (max-width: 600px) {
+  .cake-container {
+    justify-content: center;
+  }
+
+  .cake-card {
+    width: 90%;
+    margin: 0 auto;
+  }
+}
